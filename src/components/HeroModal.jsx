@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const HeroModal = ({ isModalOpen, setIsModalOpen }) => {
+  const [isChecked, setIsChecked] = useState(false);  // State to manage checkbox
+
   return (
     <AnimatePresence>
       {isModalOpen && (
@@ -26,15 +28,28 @@ export const HeroModal = ({ isModalOpen, setIsModalOpen }) => {
               <br />
               Please ensure you agree to these rules before proceeding.
             </p>
+
+            {/* Checkbox */}
+            <div className="mt-4 flex items-center justify-center">
+              <input
+                type="checkbox"
+                className="mr-2"
+                checked={isChecked}
+                onChange={() => setIsChecked(!isChecked)}
+              />
+              <label className="text-zinc-400 text-sm">I agree to the community rules</label>
+            </div>
+
             <div className="mt-6 flex justify-center gap-4">
               <motion.button
-                className="px-6 py-2 bg-[#FBE600] text-black font-medium rounded"
+                className={`px-6 py-2 bg-[#FBE600] text-black font-medium rounded ${!isChecked ? 'opacity-50 cursor-not-allowed' : ''}`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
                   window.open('https://t.me/yourtelegramchannel', '_blank'); // Redirect to Telegram
                   setIsModalOpen(false); // Close modal
                 }}
+                disabled={!isChecked} // Disable button until checkbox is checked
               >
                 Join Community
               </motion.button>

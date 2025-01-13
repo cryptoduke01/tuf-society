@@ -35,8 +35,14 @@ const BackgroundLines = () => (
     ))}
   </div>
 );
+
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);  // Track checkbox state
+
+  const handleCheckboxChange = (e) => {
+    setIsChecked(e.target.checked);  // Update checkbox state
+  };
 
   return (
     <div className="relative min-h-screen bg-zinc-900 overflow-hidden">
@@ -122,8 +128,6 @@ const Hero = () => {
             </svg>
           </motion.div>
         </motion.div>
-
-
       </div>
 
       {/* Modal */}
@@ -150,15 +154,32 @@ const Hero = () => {
                 <br />
                 Please ensure you agree to these rules before proceeding.
               </p>
+
+              {/* Checkbox for agreement */}
+              <div className="mt-4">
+                <label className="flex items-center text-zinc-400">
+                  <input
+                    type="checkbox"
+                    className="mr-2"
+                    checked={isChecked}
+                    onChange={handleCheckboxChange}
+                  />
+                  I agree to the terms and conditions
+                </label>
+              </div>
+
               <div className="mt-6 flex justify-center gap-4">
                 <motion.button
                   className="px-6 py-2 bg-[#FBE600] text-black font-medium rounded"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => {
-                    window.open('https://t.me/yourtelegramchannel', '_blank'); // Redirect to Telegram
-                    setIsModalOpen(false); // Close modal
+                    if (isChecked) {
+                      window.open('https://t.me/tufsociety', '_blank'); // Redirect to Telegram
+                      setIsModalOpen(false); // Close modal
+                    }
                   }}
+                  disabled={!isChecked} // Disable button if checkbox is not checked
                 >
                   Join Community
                 </motion.button>
