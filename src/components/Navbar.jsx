@@ -1,37 +1,29 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import TufLogo from '../assets/tuflogo.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <motion.nav 
+    <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className="fixed w-full z-50 bg-black/95"
     >
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between px-6 h-20">
-          <motion.div 
+          <motion.div
             className="flex items-center space-x-2"
             whileHover={{ scale: 1.05 }}
           >
-            <svg className="h-10 w-10" viewBox="0 0 100 100">
-              <motion.path
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-                fill="#B8860B"
-                d="M50,0 L93.3,25 L93.3,75 L50,100 L6.7,75 L6.7,25 Z"
-              />
-              <motion.path
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-                fill="black"
-                d="M50,20 L80,40 L80,60 L50,80 L20,60 L20,40 Z"
-              />
-            </svg>
+            <img
+              src={TufLogo}
+              alt="TUF Society Logo"
+              className='h-10 w-10'
+              viewBox="0 0 100 100"
+
+            />
             <span className="font-extrabold text-2xl tracking-tighter text-zinc-100">TUF™</span>
           </motion.div>
 
@@ -41,11 +33,10 @@ const Navbar = () => {
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase().replace(' ', '')}`}
-                className={`${
-                  item === 'JOIN NOW' 
-                    ? 'px-6 py-2 bg-[#B8860B] text-black' 
-                    : 'text-zinc-400 hover:text-[#B8860B]'
-                } font-medium tracking-wide`}
+                className={`${item === 'JOIN NOW'
+                    ? 'px-6 py-2 bg-[#FBE600] text-black'
+                    : 'text-zinc-400 hover:text-[#FBE600]'
+                  } font-medium tracking-wide`}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
@@ -89,9 +80,8 @@ const Navbar = () => {
                   <motion.a
                     key={item}
                     href={`#${item.toLowerCase().replace(' ', '')}`}
-                    className={`block py-3 ${
-                      item === 'JOIN NOW' ? 'text-[#B8860B]' : 'text-zinc-400'
-                    } font-medium tracking-wide`}
+                    className={`block py-3 ${item === 'JOIN NOW' ? 'text-[#B8860B]' : 'text-zinc-400'
+                      } font-medium tracking-wide`}
                     initial={{ x: -50, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: i * 0.1 }}

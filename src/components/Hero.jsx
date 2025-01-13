@@ -57,7 +57,7 @@ const Hero = () => {
             THE<br />
             UNCALLED<br />
             <motion.span 
-              className="text-[#B8860B]"
+              className="text-[#FBE600]"
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -73,7 +73,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <p className="text-zinc-400 text-xl tracking-wide leading-relaxed">
-              A revolutionary Web3 community forging the future of digital culture and innovation.
+              Revolutionary Web3 Community Forging the Future of Digital Culture and Innovation.
             </p>
           </motion.div>
 
@@ -84,14 +84,14 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <motion.button
-              className="px-8 py-4 bg-[#B8860B] text-black font-bold text-lg tracking-wider hover:bg-[#8B6914] transition-all"
+              className="px-8 py-4 bg-[#FBE600] text-black font-bold text-lg tracking-wider hover:bg-[#FBE600] transition-all"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               JOIN THE FAMILY
             </motion.button>
             <motion.button
-              className="px-8 py-4 border-2 border-zinc-700 text-zinc-100 font-bold text-lg tracking-wider hover:border-[#B8860B] transition-all"
+              className="px-8 py-4 border-2 border-zinc-700 text-zinc-100 font-bold text-lg tracking-wider hover:border-[#FBE600] transition-all"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -101,7 +101,7 @@ const Hero = () => {
 
           {/* Decorative Elements */}
           <motion.div
-            className="absolute right-0 bottom-0 w-64 h-64 bg-[#B8860B]/10"
+            className="absolute right-0 bottom-0 w-64 h-64 bg-[#FBE600]/40"
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
@@ -109,7 +109,7 @@ const Hero = () => {
           />
           
           <motion.div 
-            className="absolute right-48 top-48 w-6 h-6 text-[#B8860B]"
+            className="absolute right-48 top-48 w-6 h-6 text-[#FBE600]"
             initial={{ rotate: -180, opacity: 0 }}
             animate={{ rotate: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1.2 }}
