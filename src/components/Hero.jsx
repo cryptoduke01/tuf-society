@@ -57,7 +57,7 @@ const Hero = () => {
           transition={{ duration: 1 }}
         >
           <motion.h1
-            className="text-[clamp(3rem,15vw,12rem)] font-black text-zinc-100 leading-none tracking-tighter"
+            className="text-[clamp(3rem,15vw,10.5rem)] font-black text-zinc-100 leading-none tracking-tighter"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
