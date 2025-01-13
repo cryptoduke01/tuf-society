@@ -7,7 +7,7 @@ const AboutSection = () => {
     const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
     return (
-        <section className="relative bg-zinc-900 py-24" id='about'>
+        <section className="relative bg-zinc-900 py-16 sm:py-24" id='about'> {/* Adjusted padding */}
             <motion.div
                 style={{ y }}
                 className="max-w-7xl mx-auto px-6"
@@ -16,7 +16,7 @@ const AboutSection = () => {
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-[clamp(2.5rem,8vw,6rem)] font-black text-zinc-100 tracking-tighter mb-16"
+                    className="text-[clamp(2.5rem,8vw,6rem)] font-black text-zinc-100 tracking-tighter mb-8 sm:mb-16"
                 >
                     ABOUT<span className="text-[#FBE600]"> TUF™</span>
                 </motion.h2>
@@ -62,9 +62,9 @@ const AboutSection = () => {
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mt-24"
+                    className="mt-16 sm:mt-24"
                 >
-                    <h3 className="text-3xl font-bold text-zinc-100 mb-12">Key Contributors</h3>
+                    <h3 className="text-3xl font-bold text-zinc-100 mb-8 sm:mb-12">Key Contributors</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
                             {
