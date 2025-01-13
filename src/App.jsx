@@ -1,10 +1,10 @@
-// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import TufHero from "./components/Hero";
 
 const App = () => {
   return (
     <main className="relative">
-      {/* <Navbar /> */}
+      <Navbar />
       <TufHero />
     </main>
   );
