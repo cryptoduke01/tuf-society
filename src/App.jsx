@@ -1,12 +1,12 @@
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
+import TufHero from "./components/Hero";
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-    </div>
+    <main className="relative">
+      {/* <Navbar /> */}
+      <TufHero />
+    </main>
   );
 };
 
