@@ -7,7 +7,7 @@ const AboutSection = () => {
     const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
     return (
-        <section className="relative bg-zinc-900 py-24">
+        <section className="relative bg-zinc-900 py-24" id='about'>
             <motion.div
                 style={{ y }}
                 className="max-w-7xl mx-auto px-6"
@@ -18,7 +18,7 @@ const AboutSection = () => {
                     viewport={{ once: true }}
                     className="text-[clamp(2.5rem,8vw,6rem)] font-black text-zinc-100 tracking-tighter mb-16"
                 >
-                    ABOUT<span className="text-[#FBE600]">TUF™</span>
+                    ABOUT<span className="text-[#FBE600]"> TUF™</span>
                 </motion.h2>
 
                 <div className="grid md:grid-cols-2 gap-12">
@@ -44,14 +44,18 @@ const AboutSection = () => {
                     >
                         {[
                             { label: 'Founded', value: '2024' },
-                            { label: 'Members', value: '1000+' }
+                            { label: 'Members', value: '800+' }
                         ].map((stat, i) => (
-                            <div key={i} className="bg-zinc-800/50 p-6 rounded-lg">
+                            <div
+                                key={i}
+                                className="bg-zinc-800/50 p-6 rounded-lg flex flex-col items-center justify-center text-center shadow-md transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#FBE600]/50"
+                            >
                                 <h3 className="text-[#FBE600] text-4xl font-bold mb-2">{stat.value}</h3>
                                 <p className="text-zinc-400">{stat.label}</p>
                             </div>
                         ))}
                     </motion.div>
+
                 </div>
 
                 <motion.div
@@ -66,19 +70,19 @@ const AboutSection = () => {
                             {
                                 name: 'Reze™',
                                 role: 'Founder',
-                                twitter: 'https://twitter.com/RezeHandle',
-                                profilePic: '/images/reze.jpg',
+                                twitter: 'https://x.com/5starReze',
+                                profilePic: 'https://pbs.twimg.com/profile_images/1877265361390690304/Weeqez-d_400x400.jpg',
                             },
                             {
                                 name: 'Chris Thompson™',
                                 role: 'Co-Founder',
-                                twitter: 'https://twitter.com/ChrisHandle',
-                                profilePic: '/images/chris.jpg',
+                                twitter: 'https://x.com/Chris_thabuildR',
+                                profilePic: 'https://pbs.twimg.com/profile_images/1872215824540315648/LiAZoyHA_400x400.jpg',
                             },
                             {
                                 name: 'Cheddar™',
                                 role: 'Community Lead',
-                                twitter: 'https://twitter.com/CheddarHandle',
+                                twitter: 'https://x.com/Cheddar_tweets',
                                 profilePic: 'https://pbs.twimg.com/profile_images/1778779084044079105/MTW65rGq_400x400.jpg',
                             },
                             {
@@ -95,9 +99,9 @@ const AboutSection = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
                                 whileHover={{ y: -10 }}
-                                className="bg-zinc-800/50 p-8 rounded-lg flex flex-col items-center text-center"
+                                className="bg-zinc-800/50 p-8 rounded-lg flex flex-col items-center text-center shadow-md transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#FBE600]/50"
                             >
-                                <div className="w-24 h-24 rounded-full bg-zinc-700 mb-6 overflow-hidden">
+                                <div className="w-24 h-24 rounded-full bg-zinc-700 mb-6 overflow-hidden shadow-md">
                                     <img
                                         src={member.profilePic}
                                         alt={member.name}
@@ -118,6 +122,7 @@ const AboutSection = () => {
                             </motion.div>
                         ))}
                     </div>
+
                 </motion.div>
             </motion.div>
         </section>

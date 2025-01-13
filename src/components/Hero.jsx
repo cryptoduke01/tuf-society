@@ -40,15 +40,15 @@ const Hero = () => {
   return (
     <div className="relative min-h-screen bg-zinc-900 overflow-hidden">
       <BackgroundLines />
-      
+
       <div className="relative max-w-7xl mx-auto px-6 pt-32">
-        <motion.div 
+        <motion.div
           className="flex flex-col items-start"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <motion.h1 
+          <motion.h1
             className="text-[clamp(3rem,15vw,12rem)] font-black text-zinc-100 leading-none tracking-tighter"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -56,7 +56,7 @@ const Hero = () => {
           >
             THE<br />
             UNCALLED<br />
-            <motion.span 
+            <motion.span
               className="text-[#FBE600]"
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -65,8 +65,8 @@ const Hero = () => {
               FAMILY™
             </motion.span>
           </motion.h1>
-          
-          <motion.div 
+
+          <motion.div
             className="mt-8 max-w-2xl"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -77,7 +77,7 @@ const Hero = () => {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="mt-12 flex flex-col sm:flex-row gap-6"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -90,13 +90,15 @@ const Hero = () => {
             >
               JOIN THE FAMILY
             </motion.button>
-            <motion.button
-              className="px-8 py-4 border-2 border-zinc-700 text-zinc-100 font-bold text-lg tracking-wider hover:border-[#FBE600] transition-all"
+            <motion.a
+              href="#about" // Points to the "About" section
+              className="px-8 py-4 border-2 border-zinc-700 text-zinc-100 font-bold text-lg tracking-wider hover:border-[#FBE600] transition-all inline-block"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               LEARN MORE
-            </motion.button>
+            </motion.a>
+
           </motion.div>
 
           {/* Decorative Elements */}
@@ -107,8 +109,8 @@ const Hero = () => {
             transition={{ duration: 1, delay: 1 }}
             style={{ filter: 'blur(60px)' }}
           />
-          
-          <motion.div 
+
+          <motion.div
             className="absolute right-48 top-48 w-6 h-6 text-[#FBE600]"
             initial={{ rotate: -180, opacity: 0 }}
             animate={{ rotate: 0, opacity: 1 }}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import TufLogo from '../assets/tuflogo.png';
+import AboutSection from './AboutSection';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
