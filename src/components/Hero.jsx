@@ -38,10 +38,10 @@ const BackgroundLines = () => (
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isChecked, setIsChecked] = useState(false);  // Track checkbox state
+  const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = (e) => {
-    setIsChecked(e.target.checked);  // Update checkbox state
+    setIsChecked(e.target.checked);
   };
 
   return (
@@ -49,7 +49,7 @@ const Hero = () => {
       <BackgroundLines />
 
       {/* Main Content */}
-      <div className="relative max-w-7xl mx-auto px-6 pt-32">
+      <div className="relative max-w-7xl mx-auto px-6 pt-32 md:pt-24">
         <motion.div
           className="flex flex-col items-start"
           initial={{ opacity: 0 }}
@@ -128,6 +128,11 @@ const Hero = () => {
             </svg>
           </motion.div>
         </motion.div>
+      </div>
+
+      {/* About Section */}
+      <div id="about" className="bg-zinc-900 py-16 sm:py-24">
+        {/* Your About Section Content Here */}
       </div>
 
       {/* Modal */}
