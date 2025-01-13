@@ -86,7 +86,7 @@ const AboutSection = () => {
                                 profilePic: 'https://pbs.twimg.com/profile_images/1778779084044079105/MTW65rGq_400x400.jpg',
                             },
                             {
-                                name: 'Him The GodFather™',
+                                name: 'Tecoo™',
                                 role: 'Administrator',
                                 twitter: 'https://x.com/Bigtecoo',
                                 profilePic: 'https://pbs.twimg.com/profile_images/1727463921550868480/Z9stCsbX_400x400.jpg',
